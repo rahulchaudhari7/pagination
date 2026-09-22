@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Logback configuration for Structured Logging with Correlation ID (MDC) -->
+    
+    <!-- Console Appender with colored output including correlationId -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) [traceId=%X{correlationId:-NONE}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Structured JSON Appender (for Logstash / ELK / Cloud Logging) -->
+    <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <logLevel/>
+                <loggerName/>
+                <threadName/>
+                <mdc/> <!-- Automatically captures correlationId from MDC -->
+                <message/>
+                <stackTrace/>
+            </providers>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

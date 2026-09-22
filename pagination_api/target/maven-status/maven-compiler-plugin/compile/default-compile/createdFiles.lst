@@ -1,9 +1,0 @@
-com\example\pagination_api\config\CacheConfig.class
-com\example\pagination_api\config\WebConfig$1.class
-com\example\pagination_api\controller\StudentController.class
-com\example\pagination_api\repository\StudentRepository.class
-com\example\pagination_api\service\StudentService.class
-com\example\pagination_api\controller\ApiExceptionHandler.class
-com\example\pagination_api\config\WebConfig.class
-com\example\pagination_api\model\Student.class
-com\example\pagination_api\PaginationApiApplication.class

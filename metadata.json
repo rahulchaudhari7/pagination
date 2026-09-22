@@ -1,0 +1,6 @@
+{
+  "name": "StudHub - Student Directory",
+  "description": "RESTful API design and student management platform featuring Bean Validation (JSR 380), CORS, pagination, global exception handling (@ControllerAdvice), correlation ID tracing, and structured logging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
